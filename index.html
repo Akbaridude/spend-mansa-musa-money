@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spend Mansa Musa's Money</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f2efe3; color: #333; text-align: center; }
+    h1 { font-size: 2.5em; margin-top: 20px; }
+    .money { font-size: 2em; color: #b29600; margin-bottom: 20px; }
+    .items { display: flex; flex-wrap: wrap; justify-content: center; }
+    .item { border: 1px solid #ccc; border-radius: 10px; margin: 10px; padding: 15px; width: 200px; background: #fff; }
+    .item button { margin-top: 10px; padding: 5px 10px; background: #b29600; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<h1>Spend Mansa Musa's Money</h1>
+<div class="money" id="money">$400,000,000,000</div>
+
+<div class="items" id="items"></div>
+
+<script>
+  let totalMoney = 400000000000;
+  const items = [
+    { name: "Sack of Salt", price: 10 },
+    { name: "Bag of Millet", price: 5 },
+    { name: "Goat", price: 20 },
+    { name: "Chicken", price: 8 },
+    { name: "Cow", price: 100 },
+    { name: "Silk Robe", price: 200 },
+    { name: "Ivory Comb", price: 75 },
+    { name: "Camel", price: 300 },
+    { name: "Horse", price: 600 },
+    { name: "Small River Canoe", price: 800 },
+    { name: "Build a Mosque", price: 50000 },
+    { name: "University", price: 5000000 },
+    { name: "1 Ton of Gold Dust", price: 1000000 },
+    { name: "City-Wide Feast", price: 4000000 }
+  ];
+
+  const updateMoney = () => {
+    document.getElementById("money").innerText = `$${totalMoney.toLocaleString()}`;
+  };
+
+  const container = document.getElementById("items");
+  items.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "item";
+    div.innerHTML = `<h3>${item.name}</h3><p>Price: $${item.price.toLocaleString()}</p><button>Buy</button>`;
+    div.querySelector("button").onclick = () => {
+      if (totalMoney >= item.price) {
+        totalMoney -= item.price;
+        updateMoney();
+      } else {
+        alert("Not enough money!");
+      }
+    };
+    container.appendChild(div);
+  });
+
+  updateMoney();
+</script>
+
+</body>
+</html>
