@@ -30,21 +30,22 @@
 <script>
   let totalMoney = 400000000000;
   const items = [
-    { name: "Sack of Salt", price: 10 },
-    { name: "Bag of Millet", price: 5 },
-    { name: "Goat", price: 20 },
-    { name: "Chicken", price: 8 },
-    { name: "Cow", price: 100 },
-    { name: "Silk Robe", price: 200 },
-    { name: "Ivory Comb", price: 75 },
-    { name: "Camel", price: 300 },
-    { name: "Horse", price: 600 },
-    { name: "Small River Canoe", price: 800 },
-    { name: "Build a Mosque", price: 50000 },
-    { name: "University", price: 5000000 },
-    { name: "1 Ton of Gold Dust", price: 1000000 },
-    { name: "City-Wide Feast", price: 4000000 }
-  ];
+  { name: "Sack of Salt", price: 10, img: "https://upload.wikimedia.org/wikipedia/commons/3/39/Salt_blocks.jpg" },
+  { name: "Bag of Millet", price: 5, img: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Millet_Seeds.JPG" },
+  { name: "Goat", price: 20, img: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Goat_on_a_farm.jpg" },
+  { name: "Chicken", price: 8, img: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Hen_at_home.jpg" },
+  { name: "Cow", price: 100, img: "https://upload.wikimedia.org/wikipedia/commons/8/84/Cow_female_black_white.jpg" },
+  { name: "Silk Robe", price: 200, img: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Silk_robe.jpg" },
+  { name: "Ivory Comb", price: 75, img: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Akan_ivory_comb.jpg" },
+  { name: "Camel", price: 300, img: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Camel_at_Giza_pyramid_complex.jpg" },
+  { name: "Horse", price: 600, img: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Arabian_Horse.jpg" },
+  { name: "Small River Canoe", price: 800, img: "https://upload.wikimedia.org/wikipedia/commons/8/81/African_canoe.jpg" },
+  { name: "Build a Mosque", price: 50000, img: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Djinguereber_Mosque.jpg" },
+  { name: "University", price: 5000000, img: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Sankore_Mosque_and_University.jpg" },
+  { name: "1 Ton of Gold Dust", price: 1000000, img: "https://upload.wikimedia.org/wikipedia/commons/5/55/Gold_dust_in_pan.jpg" },
+  { name: "City-Wide Feast", price: 4000000, img: "https://upload.wikimedia.org/wikipedia/commons/2/2d/African_feast.jpg" }
+];
+
 
   const updateMoney = () => {
     document.getElementById("money").innerText = `$${totalMoney.toLocaleString()}`;
